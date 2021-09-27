@@ -1,0 +1,5 @@
+letter = str(input())
+spilt  = str(input())
+list1  =  letter.split(spilt)
+print(len(letter))
+print(list1,end='')
