@@ -22,6 +22,8 @@ if (a > 10.5):
     a = 0
 if (b > 10.5):
     b = 0
+print(a)
+print(b)
 if (abs(10.5 - a) == abs(10.5 - b)):
     print('Tie', end='')
 elif (abs(10.5 - a) > abs(10.5 - b)):
