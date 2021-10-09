@@ -1,11 +1,8 @@
-def power(a,b):
-    if(b==1):
-        return a
-    temp = power(a,b//2)
-    if(b%2==1):
-        return temp*temp*a
-    else:
-        return temp*temp
+import math
+falg = True
+i  = int(input())
+for k in range(2,int(math.sqrt()+1)):
+    if(i%k==0):
+        print('is not prime',end='')
 
-
-print(power(10,3))
+print('prime',end='')
