@@ -27,6 +27,7 @@ def main():
             else:break
         print(a - int(not check(input1)) % (1000000007))
 
+
 if __name__ == '__main__':
     main()
 
