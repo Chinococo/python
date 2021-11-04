@@ -1,5 +1,5 @@
 import sys
-
+mod = 1e9+7
 
 def check(i):
     c = True
