@@ -1,18 +1,28 @@
+s = ['~','!','@','#','$','%','^','&','*','<','>','_','+','=']
 def count(s):
     c = 0
+    list1=[]
     for i in range(len(s)):
         if s[i].islower():
             c += 1
         elif s[i].isupper():
             c += 2
-        elif s[i].isdigit():
+        elif s[i].isdigit() :
+            list1.append(i)
             c += 3
-        else:
+        elif s[i] in s:
             c += 5
-    for i in range(len(s) - 5):
-        if s[i] == s[i + 2] == s[i + 4] and s[i + 1] == s[i + 3]:
-            c += 10
-            break
+    m=1
+    for i in range(1,len(list1)):
+
+       if(list1[i]-list1[i-1]>1):
+           m+=1
+           if(m>=5):
+               c+=10
+               break
+       else:
+           m=1
+
 
     return c
 
