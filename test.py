@@ -1,8 +1,8 @@
-import math
-falg = True
-i  = int(input())
-for k in range(2,int(math.sqrt()+1)):
-    if(i%k==0):
-        print('is not prime',end='')
-
-print('prime',end='')
+def fun(val):
+    val+=1
+def main():
+    val = 10
+    fun(val)
+    print(val)
+if __name__ == '__main__':
+    main()
