@@ -1,18 +1,16 @@
 def bfs(list2,target,queue,record):
     next = []
-    re = list()
+    re = []
     for i in range(len(queue)):
         if target==queue[i]:
             print('Yes!',end='')
             return
         for index in range(len(list2[queue[i]])):
-            if list2[queue[i]][index] not in record[i]:
-                t = record[i].copy()
-                t.add(queue[i])
-                re.append(t)
+            if list2[queue[i]][index] not in record:
+                re = record.copy()
+                re.append(queue[i])
                 next.append(list2[queue[i]][index])
-    if len(next)==0:
-        #print(record)
+    if len(queue)==0:
         print('No!',end='')
     else:
         #print(next)
@@ -20,13 +18,9 @@ def bfs(list2,target,queue,record):
 
 def main():
     n,x,y= map(int,input().split())
-    list1 = dict()
+    list1 = [[] for i in range(1000000)]
     for i in range(n):
         x1,y1=map(int,input().split())
-        if x1 not in list1:
-            list1[x1]=list()
-        if y1 not in list1:
-            list1[y1]=list()
         list1[x1].append(y1)
         list1[y1].append(x1)
     queue = []
