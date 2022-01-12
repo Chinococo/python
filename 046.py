@@ -7,7 +7,6 @@ def dfs(data,sum,index,queue,prev,ban,d,maxd):
             #print(ban)
             list1.append(sum)
         return
-
     if prev<=data[index][0] and not index in ban:
         t1 = queue.copy()
         t1.append(index)
